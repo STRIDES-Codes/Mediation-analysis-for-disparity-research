@@ -1,0 +1,141 @@
+#
+# Shiny App for Multiple Mediation Analysis for Big Data Sets
+# NIH Code-a-thon 2021
+# Team: Nguyen, Briana, Jia-Hua, Rime, Qingzhao 
+# Last updated: June 6, 2021
+#
+
+library(shiny)
+library(mmabig)
+
+# Define UI for application that draws a histogram
+ui <- fluidPage(
+
+    # Application title
+    titlePanel("Multiple Mediation Analysis for Big Data Sets"),
+    
+    # Sidebar with a slider input for number of bins 
+    sidebarLayout(
+        sidebarPanel(
+            
+            # Input: Select a file
+            fileInput("file1", "Select your file", 
+                      multiple = T, 
+                      accept = c("text/csv",
+                                 "text/comma-separated-values",
+                                 ".csv",
+                                 ".sas7bdat")),
+            
+            # Input: Checkbox if file has header
+            checkboxInput("header", "Header", T),
+            
+            splitLayout(         
+                # Input: Select separator
+                selectInput("sep", "Separator:",
+                            choices = c(Comma = ",",
+                                        Semicolon = ";",
+                                        Tab = "\t"),
+                            selected = ","),
+                
+                # Input: Select Decimal
+                selectInput("dec", "Decimal:",
+                               choices = c(Period = ".",
+                                           Comma = ","),
+                               selected = ".")),
+            
+            splitLayout(    
+                # Input: Select quotes
+                selectInput("quote", "Quote:",
+                            choices = c(None = "",
+                                        "Double Quote" = '"',
+                                        "Single Quote" = "'"),
+                            selected = '"'),
+                
+                # Input: Select number of rows to display
+                selectInput("disp", "Display:",
+                            choices = c(Head = "head",
+                                        All = "all"),
+                            selected = "head")),
+            
+            # Horizontal line 
+            tags$hr(),
+
+            # Predictor variables            
+            selectInput("pred", "Independent Variable(s):",
+                        choices = colnames(data()),
+                        multiple = T),
+            
+            # Outcome variables
+            selectInput("y", "Dependent Variable(s):",
+                        choices = colnames(data()),
+                        multiple = T),
+            
+            # Mediator/Confounding variables
+            selectInput("m", "Mediator(s):",
+                        choices = colnames(data()),
+                        multiple = T),
+            
+            # Significance testing of predictor-mediator relationship
+            selectInput("testtype", "Predictor-mediator hypothesis testing:",
+                        choices = c("1",
+                                    "2"),
+                        selected = "1"),
+            
+            actionButton("submit", "Submit", class = "btn-success"),
+            
+        ),
+
+        # Show a plot of the generated distribution
+        mainPanel(
+           tableOutput("contents"),
+           verbatimTextOutput("stats"),
+           verbatimTextOutput("str")
+        )
+    )
+)
+
+# Define server logic to read selected file
+server <- function(input, output) {
+    
+    # Preview of dataframe
+    output$contents <- renderTable({
+        req(input$file1)
+        df <- read.csv(input$file1$datapath,
+                       header = input$header,
+                       sep = input$sep,
+                       quote = input$quote, 
+                       dec = input$dec
+                       )
+        if(input$disp == "head") {
+            return(head(df))
+        }
+        else {
+            return(df)
+        }
+    })
+    
+    # Structure of dataframe
+    output$str <- renderPrint({
+        req(input$file1)
+        df <- read.csv(input$file1$datapath,
+                       header = input$header,
+                       sep = input$sep,
+                       quote = input$quote, 
+                       dec = input$dec
+        )
+        str(input$df)
+    })
+    
+    model <- reactive({
+        m1 <- mma.big(x=input$m, y=input$y, mediator=1:input$m, pred=input$pred, 
+                      alpha=1, alpha1=0.05, alpha2=0.05, n2=3)
+        return(m1)
+        })
+    
+    output$stats <- renderPrint({
+        summary(model())
+    })
+}
+
+# Run the app 
+shinyApp(ui, server)
