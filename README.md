@@ -11,6 +11,7 @@ This  project aims at creating an interactive interface for the use of the R pac
 Asthma is a chronic inflammatory respiratory illness characterized by coughing, wheezing, and shortness of breath and lower quality of life (CDC, 2011). It is often associated with familial, allergenic, socioeconomic, psychological, and environmental factors (CDC, 2003). Approximately, 20 million adults have asthma in the United States (US) (CDC, 2019). Self-reported current asthma prevalence among racial/ethnic minority populations ranged from 3.1% to 14.5%, compared with 7.6% among whites (CDC, 2004). Several factors have been associated with increased prevalence of asthma among adults. However, there has been little work done to date that explicitly evaluates the role played by factors such as alcohol, sociodemographic factors, depression, obesity and tobacco use in mediating observed disparities in asthma.
 
 **Methods**
+
 **Data**
 
 We analyzed data from the 2018 Behavioral Risk Factor Surveillance System (BRFSS). The BRFSS comprises telephone surveys conducted by all 50 states, the District of Columbia, Puerto Rico, and Guam of the noninstitutionalized, civilian U.S. population aged >18 years. The survey collects information about modifiable risk factors for chronic diseases and other leading causes of death. 
