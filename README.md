@@ -12,7 +12,8 @@ Asthma is a chronic inflammatory respiratory illness characterized by coughing, 
 
 
 **Workflow**
-![Alt text](https://github.com/STRIDES-Codes/Mediation-analysis-for-disparity-research/blob/main/group%202/Figures/Workflow.png)
+
+<img src="https://github.com/STRIDES-Codes/Mediation-analysis-for-disparity-research/blob/main/group%202/Figures/Workflow.png" width="500" alt="Workflow"/><br/>
 
 **Methods**
 
