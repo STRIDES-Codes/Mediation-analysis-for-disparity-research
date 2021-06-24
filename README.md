@@ -5,10 +5,14 @@ Mediation analysis is used in many fields to differentiate effect between a pred
 This  project aims at creating an interactive interface for the use of the R package: mmabig. We will then illustrate its use on a real data analysis.
 
 
-#**Problem** 
+**Problem** 
 
 
 Asthma is a chronic inflammatory respiratory illness characterized by coughing, wheezing, and shortness of breath and lower quality of life (CDC, 2011). It is often associated with familial, allergenic, socioeconomic, psychological, and environmental factors (CDC, 2003). Approximately, 20 million adults have asthma in the United States (US) (CDC, 2019). Self-reported current asthma prevalence among racial/ethnic minority populations ranged from 3.1% to 14.5%, compared with 7.6% among whites (CDC, 2004). Several factors have been associated with increased prevalence of asthma among adults. However, there has been little work done to date that explicitly evaluates the role played by factors such as alcohol, sociodemographic factors, depression, obesity and tobacco use in mediating observed disparities in asthma.
+
+
+**Workflow**
+![Alt text](https://github.com/STRIDES-Codes/Mediation-analysis-for-disparity-research/blob/main/group%202/Figures/Workflow.png)
 
 **Methods**
 
