@@ -26,7 +26,10 @@ Race/ethnicity was defined as non-Hispanic White, non-Hispanic Black, non-Hispan
 
 **Study variables**
 
-These variables included sex (Male/female), education level (less than high school/high school/college graduate), income (<15000/15000-24999/ 25000-34999/35000-49999/50000 or more), age (18-24/ 25-34/ 35-44/ 45-54/ 55-64/ >65), body mass index (underweight/normal weight/ overweight/obese), and heavy alcohol drinking (Yes/No). Depression was assessed by the question “Have you ever told you had a depressive disorder” and classified as yes/no answers. Furthermore, those who responded “yes” to questions “Have you smoked at least 100 cigarettes in your entire life?” and “Have you ever used an ENDS…even just one time, in your entire life?” and “Have you ever used an smokeless tobacco products…even just one time, in your entire life?” and reported using these products “some days” or “every day” were classified as current users of cigarettes, electronic nicotine and delivery systems (ENDS) and smokeless tobacco (SLT), respectively. Finally, those who reported using marijuana at least one day in the past 30 days were categorized as current users.
+These variables included sex (Male/female), education level (less than high school/high school/college graduate), income, age, body mass index, and heavy alcohol drinking (Yes/No). Depression was assessed by the question “Have you ever told you had a depressive disorder” and classified as yes/no answers. Furthermore, those who responded “yes” to questions “Have you smoked at least 100 cigarettes in your entire life?” and “Have you ever used an ENDS…even just one time, in your entire life?” and “Have you ever used an smokeless tobacco products…even just one time, in your entire life?” and reported using these products “some days” or “every day” were classified as current users of cigarettes, electronic nicotine and delivery systems (ENDS) and smokeless tobacco (SLT), respectively. Finally, those who reported using marijuana at least one day in the past 30 days were categorized as current users.
 
-![Mediation diagram](https://user-images.githubusercontent.com/86035332/123150389-4c62e380-d430-11eb-96ff-0977f8e15bd7.png)
+![Up_Mediation Diagram](https://user-images.githubusercontent.com/86035332/123295649-edf73d00-d4e3-11eb-924e-e8107c3d3c38.png)
+
+
+
 
